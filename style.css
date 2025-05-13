@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+}
+
+/* Тело страницы */
+body {
+    background-image: url(img/123.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Аватарка */
+.avatar {
+    display: block;
+    position: relative;
+    top: 15px;
+    margin: 0 auto;
+    width: 200px;
+}
+
+/*Зум*/
+.zoom-image {
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.zoom-image:hover {
+    transform: scale(1.1);
+}
+
+/*Контейнеры и Текст*/
+.box > .container1 {
+    position: relative;
+    top: 40px;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(0,0,0, 0.7);
+}
+
+/* .box > .container2 {
+    position: relative;
+    top: 160px;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0,0,0, 0.7);
+} */
+
+.box > .container1 > .text1 {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14pt;
+    height: 250px;
+    color: #ffffff;
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+/* .box > .container2 > .text2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0px 600px 0px 600px;
+    font-size: 14pt;
+    height: 200px;
+    color: #ffffff;
+} */
+
+/*Галерея*/
+.gallery {
+    display: grid;
+    position: relative;
+    top: 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 100px;
+    font-size: 15pt;
+    color:#ffffff;
+    background-color: rgba(0,0,0, 0.7);
+    padding: 2%;
+}
+
+.gallery > .grid-item p {
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.gallery > .grid-item > .one {
+  margin-bottom: 5%;
+}
+
+.gallery > .grid-item > .two {
+  margin-bottom: 10%;
+}
+
+/*Ссылки*/
+a {
+  color: rgb(196, 95, 196);
+}
+
+
+
+
+
+
+
+
+/*Ползунок*/
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #04050a;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: transparent;
+}
