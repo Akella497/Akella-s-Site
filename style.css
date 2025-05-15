@@ -89,6 +89,7 @@ body {
 
 .gallery > .grid-item p {
   margin-bottom: 10%;
+  top: 8%;
   text-align: center;
 }
 
@@ -108,7 +109,7 @@ a {
 .container3 {
     position: relative;
     background-color: rgba(0,0,0, 0.7);
-    height: 800px;
+    height: 900px;
     top: 300px;
     color: #c2c2c2;
     padding: 2%;
