@@ -4,7 +4,7 @@
 
 /* Тело страницы */
 body {
-    background-image: url(https://i.ibb.co/JRPH3S1j/123.jpg);
+    background-image: url(img/123.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -105,12 +105,29 @@ a {
   color: rgb(196, 95, 196);
 }
 
+.container3 {
+    position: relative;
+    background-color: rgba(0,0,0, 0.7);
+    height: 800px;
+    top: 300px;
+    color: #c2c2c2;
+    padding: 2%;
+}
 
+/* Изображения отзывов */
+.one {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+.zoom-one {
+    transition: transform 0.3s ease;
+}
 
-
-
-
+.zoom-one:hover {
+    transform: translateX(-50%) scale(1.1);
+}
 
 /*Ползунок*/
 ::-webkit-scrollbar {
