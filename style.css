@@ -132,7 +132,7 @@ a {
 
 /*Адаптация*/
 
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
     .gallery {
         grid-template-columns: 1fr 1fr;
     }
