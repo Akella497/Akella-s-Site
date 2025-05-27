@@ -130,6 +130,14 @@ a {
     transform: translateX(-50%) scale(1.1);
 }
 
+/*Адаптация*/
+
+@media (max-width: 1400px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 /*Ползунок*/
 ::-webkit-scrollbar {
     width: 5px;
@@ -144,14 +152,4 @@ a {
 ::-webkit-scrollbar-track {
     border-radius: 5px;
     background-color: transparent;
-}
-
-@media (max-width: 1400px) {
-    .gallery {
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        font-size: 13pt;
-        padding: 1.5%;
-        top: 150px;
-    }
 }
