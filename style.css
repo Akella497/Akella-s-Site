@@ -138,6 +138,11 @@ a {
     }
 }
 
+@media (max-width: 2560px) {
+.QHD {
+    top: 6%
+}
+
 /*Ползунок*/
 ::-webkit-scrollbar {
     width: 5px;
