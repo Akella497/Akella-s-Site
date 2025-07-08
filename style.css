@@ -143,6 +143,9 @@ a {
     top: 6%
 }
 
+    .fixed {
+    }
+
 /*Ползунок*/
 ::-webkit-scrollbar {
     width: 5px;
