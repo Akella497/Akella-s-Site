@@ -1,197 +1,164 @@
+* {
+    margin: 0;
+}
+
+/* Тело страницы */
 body {
-    background: url(https://cdn.imgpile.com/f/iqgryG1_xl.png);
+    background-image: url(https://cdn.imgpile.com/f/NSaD1Vz_xl.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
-.blocks {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: 
-    "d d d"
-    "a b c" 
-    "a b c" 
-    "a b c";
-    font-size: 15pt;
-    padding: 1rem;
-    gap: 3rem;
-    color: white;
+/* Аватарка */
+.avatar {
+    display: block;
+    position: relative;
+    top: 15px;
+    margin: 0 auto;
+    width: 200px;
 }
 
-.blocks > .a { grid-area: a; }
-.blocks > .b { grid-area: b; }
-.blocks > .c { grid-area: c; }
-.blocks > .d { grid-area: d; }
-
-
-.blocks > .a, .b, .c, .d, .e {
-    text-align: justify; 
-    background-color: #000000c9; 
-    padding: 1rem;
-    background: url(https://cdn.imgpile.com/f/bIpr1VI_xl.webp);
-    background-position: center;
-    background-attachment: scroll;
-    border: white solid 2px;
+/*Зум*/
+.zoom-image {
+    width: 300px;
+    transition: transform 0.3s ease;
 }
 
-
-
-
-.blocks2 {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: 
-    "d d d"
-    "a b c" 
-    "a b c" 
-    "a b c";
-    font-size: 15pt;
-    padding: 1rem;
-    gap: 3rem;
-    color: white;
+.zoom-image:hover {
+    transform: scale(1.1);
 }
 
-.blocks2 > .a { grid-area: a; }
-.blocks2 > .b { grid-area: b; }
-.blocks2 > .c { grid-area: c; }
-.blocks2 > .d { grid-area: d; }
-
-.blocks2 > .a, .b, .c, .d, .e {
-    text-align: justify; 
-    background-color: #000000c9; 
-    padding: 1rem;
-    background: url(https://cdn.imgpile.com/f/bIpr1VI_xl.webp);
-    background-position: center;
-    background-attachment: scroll;
-    border: white solid 2px;
-}
-
-
-.citate {
-    border-left: white solid 3px;
-    padding-left: 1rem;
-}
-
-.green { color: greenyellow; }
-.red { color: red;}
-
-
-
- #npc-wrapper {
-    color: white;
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 16px;
-    background: rgba(0,0,0,0.3);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px;
-  }
-
-  #npc-wrapper h2 {
-    margin: 0 0 12px;
-    font-size: 18px;
-  }
-
-  #addNpcBtn {
-    margin-bottom: 12px;
-    padding: 6px 12px;
-    border-radius: 6px;
-    border: 1px solid #888;
-    background: transparent;
-    color: inherit;
-    cursor: pointer;
-  }
-
-  /* Карточка теперь растягивается на всю ширину */
-  /* .npc-card {
+/*Контейнеры и Текст*/
+.box > .container1 {
+    position: relative;
+    top: 40px;
     width: 100%;
+    height: 260px;
+    background-color: rgba(0,0,0, 0.7);
+}
+
+/* .box > .container2 {
+    position: relative;
+    top: 160px;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0,0,0, 0.7);
+} */
+
+.box > .container1 > .text1 {
     display: flex;
+    text-align: center;
     flex-direction: column;
-    padding: 12px;
-    margin-bottom: 14px;
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 8px;
-    background: rgba(255,255,255,0.05);
-  } */
-
-  .npc-card {
-  width: 48%;      /* две карточки в ряд */
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  margin-bottom: 0; /* убираем нижний margin, так как gap уже есть */
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 8px;
-  background: rgba(255,255,255,0.05);
-  box-sizing: border-box;
-}
-
-  .npc-row {
-    display: flex;
     align-items: center;
-    margin-bottom: 8px;
-  }
-
-  .npc-row label {
-    flex: 0 0 140px;  /* фиксированная ширина для метки */
-    font-size: 13pt;
-    color: #fff;      /* белый текст */
-  }
-
-  .npc-row input {
-    flex: 1;
-    font-size: 13pt;
-    padding: 6px 8px;
-    color: #fff;
-    background: rgba(0,0,0,0.3);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-
-  .npc-row textarea {
-  width: 100%;
-  font-size: 13pt;
-  padding: 6px 8px;
-  color: #fff;
-  background: rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 4px;
-  box-sizing: border-box;
-  line-height: 1.2em;
-  font-family: inherit;  /* чтобы шрифт совпадал с input */
-}
-
-  .npc-controls {
+    justify-content: center;
+    font-size: 14pt;
+    color: #ffffff;
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 10px;
+}
+
+/* .box > .container2 > .text2 {
     display: flex;
-    gap: 8px;
-  }
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0px 600px 0px 600px;
+    font-size: 14pt;
+    height: 200px;
+    color: #ffffff;
+} */
 
-  .npc-controls button {
-    font-size: 12px;
-    padding: 5px 10px;
-    border: 1px solid rgba(255,255,255,0.2);
-    background: transparent;
-    color: inherit;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-
-  #npc-list {
-  display: flex;
-  flex-wrap: wrap; /* чтобы карточки переносились на новую строку */
-  gap: 12px;       /* расстояние между карточками */
+/*Галерея*/
+.gallery {
+    display: grid;
+    position: relative;
+    top: 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 100px;
+    font-size: 15pt;
+    color:#ffffff;
+    background-color: rgba(0,0,0, 0.7);
+    padding: 2%;
 }
 
-.npc-card .npc-row:first-child input {
-  color: orange;   /* оранжевый текст для имени NPC */
-  font-weight: bold; /* можно сделать имя чуть более заметным */
+.gallery > .grid-item p {
+  margin-bottom: 10%;
+  top: 8%;
+  text-align: center;
 }
 
+.gallery > .grid-item > .one {
+  margin-bottom: 5%;
+}
+
+.gallery > .grid-item > .two {
+  margin-bottom: 10%;
+}
+
+/*Ссылки*/
+a {
+  color: rgb(196, 95, 196);
+}
+
+.container3 {
+    position: relative;
+    background-color: rgba(0,0,0, 0.7);
+    height: 900px;
+    top: 300px;
+    color: #c2c2c2;
+    padding: 2%;
+}
+
+/* Изображения отзывов */
+.one {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.zoom-one {
+    transition: transform 0.3s ease;
+}
+
+.zoom-one:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+/*Адаптация*/
+
+@media (max-width: 1600px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 2560px) {
+.QHD {
+    top: 6%;
+}
+
+    .fixed {
+        margin-top: 3%;
+    }
+
+/*Ползунок*/
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #04050a;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: transparent;
+}

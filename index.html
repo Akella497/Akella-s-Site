@@ -1,246 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Методичка для RP</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/CxB5xqqL/free-icon-fantasy-4033292.png">
-</head>
-<body>
-    <div class="blocks">
-        <div class="d"><p style="font-size: 24pt;">Базовая информация</p></div>
-<div class="a">
-    <p style="font-size: 18pt; text-align: center; color: greenyellow;">Характеристики</p>
-<p><span style="color: yellow;">Телосложение:</span> сочетание грубой силы и выносливости. Повреждение телосложения это урон.</p>
-<p><span style="color: yellow;">Ловкость:</span> координация движений и моторика тела. Повреждение ловкости это усталость.</p>
-<p><span style="color: yellow;">Смекалка:</span> интеллект, внимание и изобретательность. Повреждение смекалки это смятение.</p>
-<p><span style="color: yellow">Эмпатия:</span> харизма, привлекательность и умение манипулировать окружающими. Повреждение эмпатии это стресс.</p>
-<hr>
-<p>Если в результате событий одно из Ваших значений равняется 0, то персонаж становится <span style="color: red;">небоеспособным</span>.</p>
-<p>Если Ваше телосложение в результате событий становится равно 0, то Ваш персонаж становится не только <span style="color: red;">небоеспособным</span>, но и получает <span style="color: red;">травму</span> (иногда даже несовместимую с жизнью).</p>
-</div>
-<div class="b">
-     <p style="font-size: 18pt; text-align: center; color: greenyellow;">Броски</p>
-    <p><span style="color: yellow">Рискованный бросок</span> — это нажатие кнопки «Push» в тех ситуациях, когда Вам кажется, что Ваш результат является неудачным (например, нет 6 при совершении действия, то есть нет «успеха»). Однако, некоторые значения остаются вместе с Вами даже после совершения рискованного броска.</p>
-    <p>Помните, что каждая 1 при броске — это урон, который получает Ваш персонаж при попытке совершить действие.</p>
-    <hr>
-    <p><span class="text-align: center;">При совершении рискованного броска..</span></p>
-    <div class="citate">
-        <p>Поле «Характеристики» - здесь с Вами остаются и 6, и 1.</p>
-        <p>Навыки - только 6.</p>
-        <p>Снаряжение - остаются и 6, и 1.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/xKtY3r1w/696f0ad6c108743817e0478376b39cb0.png">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" as="image" href="https://i.ibb.co/JRPH3S1j/123.jpg">
+
+  </head>
+
+  <body>
+    <img class="avatar" src="https://cdn.imgpile.com/f/IYSYBa0_xl.png" alt="Иконка" />
+
+    <div class="box">
+    <div class="container1">
+      <div class="text1">
+        <p>Привет!</p>
+        <br />
+        <p>
+          Эта страница — <a href="#gallery">портфолио</a>, которое постепенно пополняется. Здесь же находятся и <a href="#one">отзывы</a>.
+        </p>
+        <br />
+        <p>
+          Я работаю с различным творчеством. Занимаюсь правописанием и коррекцией текста, оформлением контента (CSS/HTML + Photoshop). По всем дополнительным вопросам Вы можете обратиться ко мне в личные сообщения Discord —
+          <span style="color: rgb(196, 95, 196)" ;><a href="https://discordapp.com/users/280252464148774917">akellav</a></span>.</p>
+          <br>
+          <p>Все заказы обсуждаются в индивидуальном порядке.</p>
+        <br>
+        <p style="font-size: 14px;">Прим.: Я не оказываю свои услуги на проекте PostBellum.</p>
+      </div>
     </div>
-<p>То есть выгоднее всего, чтобы персонаж обладал вкачанным навыком, так как там есть шанс перебросить 1 («неуспехи»)</p>
-</div>
-<div class="c">
-     <p style="font-size: 18pt; text-align: center; color: greenyellow;">Снаряжение</p>
-    <p>Существует три типа снаряжения: оружие, доспехи и вспомогательные.
+    </div>
 
-    <p>У каждого снаряжения есть прочность, а у боевоего снаряжения - ещё и урон.</p>
-<hr>    
-    <p><span style="color:yellow">Оружие</span> — при совершении атаки с помощью /ролл Вам необходимо выбрать оружие с помощью строки 'weapon'. Количество дополнительных кубов предопределяется показателем прочности.</p>
-    <p>Например, у Вашего персонажа есть пистолет (2 прочности и 2 урона). Ловкость у Вашего персонажа равна 5, навыки стрельбы — 3, а прочность пистолета — 2. Итого: 10 кубов при броске.</p>
-    <p>Урон расчитывается следующим образом: первая шестерка — показатель урона в абсолютном объеме (то есть в нашем случае это 2 ед. урона), все последующие успехи — прибавляют 1 ед. урона.</p>
-    <p>Например: за персонажа Вы совершаете стрельбу (10 кубиков, а именно 5+3+2, где 5 - ловкость, 3 - навыки стрельбы и 2 - пистолет), и Вам выпадают следующие значения: 1 4 5 <span style="color: green">6</span> 3 2 <span style="color: green">6</span> 4 8 <span style="color: green">6</span>. Это 4 урона.</p>
-    <hr>
-    <p><span style="color: yellow">Доспехи</span> — это Ваша защита. Некоторую часть урона может поглотить доспех (она же «броня»). Количество кубов прочности предопределяет количество кубов, которые будут проброшены Вами для «погашения» урона.</p>
-    <p>Например: в Вашего персонажа стреляют из пистолета. Вы носите с собой сыромятную броню (её прочность - 4). Противник наносит 4 единицы урона. Вы применяете в чате команду `/roll myz gear: 4` и смотрите на значения. Допустим, Вам выпали следующие значения: <span style="color:red">1</span> 2 <span style="color: green">6</span> 5.</p>
-    <p>Итак. В выпавших значениях есть одна <span style="color: red;">1 (неуспех)</span> и одна <span style="color: green">6 (успех)</span>. <p>Из-за одного неуспеха Вы потеряете 1 единицу качества брони. <br>Из-за одного успеха Вы поглощаете 1 единицу урона из 4 единиц урона, нанесенных Вам противником. <br>Оставшиеся 3 единицы урона бьют по Вашей характеристике «Телосложение».
-    <br>Однако, существуют ситуации, когда «неуспехи» не наносят урона по качеству брони. Это происходит в тех случаях, когда «успехи» поглощают весь урон, нанесенный по Вам противником.</p>
-    <hr>
-   <p><span style="color: yellow">Вспомогательное снаряжение</span> — служит для увеличения шанса вероятности успеха. Так, одни предметы могут давать бонус к влиянию, а другие и к иным навыкам. Дабы система учитывала их наличие, их название нужно прописывать в разделе `weapon` при применении команды `/ролл`.
-    </p>
-</div>
-</div>
+    <div class="gallery">
+       <div class="grid-item">
+        <p>
+         Анкета на дракона Пустоты — «Алутора»
+          <br><span style="color: rgb(196, 95, 196)" ;>(CSS/Photoshop)</span>
+        </p>
+        <p>
+          <a href="https://rp-wow.ru/charsheet/13957.html" target="_blank">
+            <img
+              class="zoom-image"
+              style="width: 500px; border: solid 2px white;"
+              src="https://cdn.imgpile.com/f/elG22VB_xl.png"
+              alt="Дракон Пустоты"
+            />
+          </a>
+        </p>
+      </div>
+       <div class="grid-item">
+        <p>
+         Анкета на ночную эльфийку — «Иэрнэ Песнь Ночи»
+          <br><span style="color: rgb(196, 95, 196)" ;>(CSS/Photoshop)</span>
+        </p>
+        <p>
+          <a href="#" target="_blank">
+            <img
+              class="zoom-image"
+              style="width: 500px; border: solid 2px white;"
+              src="https://cdn.imgpile.com/f/BbH87MN_xl.jpg"
+              alt="Ночная эльфийка"
+            />
+          </a>
+        </p>
+      </div>
+       <div class="grid-item">
+        <p>
+         Анкета на бронзового дракона — «Временные наброски»
+          <br><span style="color: rgb(196, 95, 196)" ;>(CSS/Photoshop)</span>
+        </p>
+        <p>
+          <a href="https://rp-wow.ru/charsheet/13056.html" target="_blank">
+            <img
+              class="zoom-image"
+              style="width: 500px; border: solid 2px white;"
+              src="https://cdn.imgpile.com/f/8C9t8fr_xl.jpg"
+              alt="Дракон"
+            />
+          </a>
+        </p>
+      </div>
+       <div class="grid-item">
+        <p>
+         Анкета на Отрекшегося — «История господина Фендрика»
+          <br><span style="color: rgb(196, 95, 196)" ;>(CSS/Photoshop)</span>
+        </p>
+        <p>
+          <a href="https://rp-wow.ru/charsheet/13940.html" target="_blank">
+            <img
+              class="zoom-image"
+              style="width: 500px; border: solid 2px white;"
+              src="https://cdn.imgpile.com/f/PJufNMx_xl.jpg"
+              alt="Отрекшийся"
+            />
+          </a>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>
+          Дизайн для анкеты & Сообщества игроков
+          <br><span style="color: rgb(196, 95, 196)" ;>(CSS/Photoshop)</span>
+        </p>
+        <p>
+          <a href="https://rp-wow.ru/charsheet/13352.html" target="_blank">
+            <img
+              class="zoom-image"
+              style="width: 500px; border: solid 2px white;"
+              src="https://cdn.imgpile.com/f/NvqHvq6_xl.jpg"
+              alt="World of Warcraft"
+            />
+          </a>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p id="gallery">Анкета на эльфа бездны — «Теория космогенеза» <br><span style="color: rgb(196, 95, 196)" ;>(CSS/Photoshop)</span></p>
+        <p>
+          <a href="https://rp-wow.ru/charsheet/13401.html" target="_blank">
+            <img
+              class="zoom-image"
+              style="width: 500px; border: solid 2px white;"
+              src="https://cdn.imgpile.com/f/QFaqntd_xl.png"
+              alt="Эльф бездны"
+            />
+          </a>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>
+          Анкета на драктира — «Cолдат хранительницы» <br><span style="color: rgb(196, 95, 196)" ;>(CSS/Photoshop + Коррекция текста)</span>
+        </p>
+        <p>
+          <a href="https://rp-wow.ru/charsheet/13565.html" target="_blank">
+            <img
+              class="zoom-image"
+              style="width: 500px; border: solid 2px white;"
+              src="https://cdn.imgpile.com/f/Lw63zHY_xl.jpg"
+              alt="Драктира"
+            />
+          </a>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>Гильдия — «Легион Короля Мёртвых» <br><span style="color: rgb(196, 95, 196)" ;>(CSS/Photoshop)</span></p>
+        <p>
+          <a href="https://rp-wow.ru/guilds/1787.html" target="_blank">
+            <img
+              class="zoom-image"
+              style="width: 500px; border: solid 2px white;"
+              src="https://cdn.imgpile.com/f/DyNUKkH_xl.jpg"
+              alt="Плеть"
+            />
+          </a>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>
+          Анкета на эльфа крови — «Эсселий Тень Заката», 
+          <br><span style="color: rgb(196, 95, 196)" ;>(CSS/Photoshop + Полное написание текста)</span>
+        </p>
+        <p>
+          <a href="https://rp-wow.ru/charsheet/11655.html" target="_blank">
+            <img
+              class="zoom-image"
+              style="width: 500px; border: solid 2px white;"
+              src="https://i.ibb.co/p6p1h7sn/5.jpg"
+              alt="Эльф крови"
+            />
+          </a>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>
+          Анкета на эльфа крови — «Астралор Отблеск Полумесяца»
+          <br><span style="color: rgb(196, 95, 196)" ;>(CSS/Photoshop + Полное написание текста)</span>
+        </p>
+        <p>
+          <a href="https://rp-wow.ru/charsheet/13133.html" target="_blank">
+            <img
+              class="zoom-image"
+              style="width: 500px; border: solid 2px white;"
+              src="https://cdn.imgpile.com/f/cS685xm_xl.jpg"
+              alt="Эльф крови"
+            />
+          </a>
+        </p>
+      </div>
+       <div class="grid-item">
+        <p>
+          Анкета на вампирскую нежить — «Алессандр Ланред»
+          <br><span style="color: rgb(196, 95, 196)" ;>(Редакция уже имеющегося CSS/Photoshop + Коррекция текста)</span>
+        </p>
+        <p>
+          <a href="https://rp-wow.ru/charsheet/13284.html" target="_blank">
+            <img
+              class="zoom-image"
+              style="width: 500px; border: solid 2px white;"
+              src="https://cdn.imgpile.com/f/T6bw9b0_xl.jpg"
+              alt="Вампирская нежить"
+            />
+          </a>
+        </p>
+      </div>
+       <div class="grid-item">
+        <p>
+          Анкета на дракона из стаи бесконечности — «Хронодорми»
+          <br><span style="color: rgb(196, 95, 196)" ;>(CSS/Photoshop + Частичная коррекция текста)</span>
+        </p>
+        <p>
+          <a href="https://rp-wow.ru/charsheet/13762.html" target="_blank">
+            <img
+              class="zoom-image"
+              style="width: 500px; border: solid 2px white"
+              src="https://cdn.imgpile.com/f/iLrMnI7_xl.jpg"
+              alt="Дракон из стаи бесконечности"
+            />
+          </a>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>
+          Квента на персонажа Half-Life RP — «Кайло Рид»
+          <br><span style="color: rgb(196, 95, 196)" ;>(CSS/Photoshop + Полное написание текста)</span>
+        </p>
+        <p>
+          <a href="https://akella497.github.io/KayloReed/" target="_blank">
+            <img
+              class="zoom-image"
+              style="width: 500px; border: solid 2px white"
+              src="https://i.ibb.co/23GWnNwM/image.png"
+              alt="Half-Life RP"
+            />
+          </a>
+        </p>
+      </div>
+    <div class="grid-item">
+        <p>Анкета на бронзового дракона — «Фаталис времен» <br><span style="color: rgb(196, 95, 196)" ;>(CSS/Photoshop)</span></p>
+        <p>
+          <a href="https://rp-wow.ru/charsheet/13739.html" target="_blank">
+            <img
+              class="zoom-image"
+              style="width: 500px; border: solid 2px white"
+              src="https://i.ibb.co/PzG99jYz/1.jpg"
+              alt="Бронзовый дракон"
+            />
+          </a>
+        </p>
+      </div>
+    </div>
 
-<div class="blocks2">
-<div class="d"><p style="font-size: 24pt;">О расстоянии и модификаторах</p></div>
-<div class="a"><p style="font-size: 18pt; text-align: center; color: greenyellow;">Дистанция и пермещение
-<p>В сражении расстояние между персонажем и его противниками можно условно разделить на пять ступеней:</p>
-<p><span class="red">Нулевая дистанция:</span> в непосредственной близости.</p>
-<p><span class="red">Ближняя дистанция:</span> до нескольких метров.</p>
-<p><span class="green">Средняя дистанция:</span> до пары десятков метров.</p>
-<p><span class="green">Дальняя дистанция:</span> до нескольких сотен метров.</p>
-<p><span class="green">Предельная дистанция:</span> в пределах видимости.</p>
-<br>
-Обратите внимание, что в рамках любой ступени дистанции находятся все предыдущие ступени.</p>
-<hr>
-<p>Перемещение во время сражения считается манёвром.</p>
-<p><span class="green">Перемещение на одну ступень в рамках средней дистанции требует одного манёвра</span></p>
-<p><span class="red">Перемещение на одну ступень за рамками средней дистанции требует двух манёвров.</p></span>
-<p>Помните, что, предприняв за ход два манёвра, персонаж уже не сможет совершить действие.</p>
-<hr>
-<p style="text-align: center;"><span style="color: yellow;">Полноценный ход = действие + маневр & маневр + маневр.</span></p>
-<p>Когда наступает ваш ход, вы можете предпринять либо <em>одно действие и один манёвр</em>, либо <em>два манёвра</em>. Персонаж совершает действие, когда:</p>
-<ul>
-<li>Проходит проверку любого навыка</li>
-<li>Оказывает помощь или помеху</li>
-</ul>
-<p>Персонаж совершает манёвр, когда:</p>
-<ul>
-<li>Перемещается на одну ступень дистанции</li>
-<li>Прячется в укрытие</li>
-<li>Достает предмет из рюкзака, сумки, или кармана</li>
-<li>Подбирает лежащий на земле предмет</li>
-<li>Готовит оружие к бою</li>
-<li>Целится из дистанционного оружия</li>
-<li>Перезаряжает дистанционное оружие</li>
-<li>Использует предмет</li>
-<li>Замахивается: Персонаж замахивается, чтобы усилить удар. Проверка не требуется, но замах выполняется только <strong>тяжёлым</strong> оружием. Этот манёвр необходимо предпринять непосредственно перед ударом или уколом (в том же раунде). Если атака будет успешной, урон увеличивается на 1</li>
-</ul>
-</p>
-</div>
-<div class="b">
-  <p style="text-align: center;"><p style="font-size: 18pt; text-align: center; color: greenyellow;">Модификаторы при стрельбе</span></p>
-<p><strong>Дистанция:</strong></p>
-
-<p>Средняя → –1</p>
-
-<p>Дальняя → –2</p>
-
-<p>Нулевая → –3 (не действует, если цель не замечает стрелка)</p>
-<br>
-<p><strong>Прицеливание:</strong></p>
-
-<p>Обычное → +1</p>
-
-<p>С упором/укрытием (не для лука/пращи) → +2.</p>
-  </p>Данные модификаторы действуют только в том же раунде.</p>
-<br>
-  <p><strong>Укрытие:</strong></p>
-  <p>Небоходимо совершить маневр, чтобы занять позицию. Даёт стрелку модификатор –3 по стрельбе в персонажа, что в укрытии.</p>
-</div>
-<div class="c"> <p style="text-align: center;"><p style="font-size: 18pt; text-align: center; color: greenyellow;">Прочие модификаторы</span> </p>
-<p><strong>Внезапная атака:</strong></p>
-<p>Если, по мнению мастера, персонаж застаёт врага врасплох, то в первом раунде сражения он получает +2 куба инициативы.</p>
-
-<p>Кстати об инициативе, перед началом боя необходимо бросить кубик 5d6, дабы знать, в какую очередь Вы будете атаковать (не забываем и о врагах своих, это важно!). Но если Вы атакуете исподтишка, то Вы бросаете 7d6.</p>
-<br>
-<p><strong>Атака исподтишка</strong>:</p>
-<p>Осуществляется проверка Вашей скрытности против наблюдательности врага (одна проверка, независимо от дистанции).</p> <p>Для атаки холодным оружием здесь необходимо сократить дистанцию до нулевой дистанция.</p> 
-<p>В случае провала цель замечает Вашего персонажа, и начинается бой.</p>
-<p>В случае успеха персонаж подходит и получает одно <strong>бесплатное действие</strong> до инициативы.</p>
-<p><strong>При совместной атаке все проходят проверку; провал одного раскрывает всех.</strong></p>
-<br>
-<p><strong>Засада:</strong></p>
-<p>Это особый вид атаки, подразумевающий, что персонажи ждут врага на месте.</p>
-
-<p>Каждый проходит проверку скрытности <strong>отдельно</strong>.</p>
-<p>
-  Все получают +2 к скрытности, так как враг движется к Вам, а Вы его поджидаете.
-</p>   
-</div>
-</div>
-
-
-<div id="npc-wrapper">
-  <h3 style="text-align: center;">Каталог неигровых персонажей</h2>
-  <h2 style="text-align: center;">Написанное не сохраняется! После обновления страницы содержание исчезнет.</h2>
-   <h2 style="text-align: center;">Данный блок служит помощью для Искрильщиков (игровых мастеров), для учета всех характеристик НИП во время сражений.</h2>
-    
-  <button id="addNpcBtn">+ Добавить NPC</button>
-  <div id="npc-list"></div>
-</div>
-
-<script>
-  const npcList = document.getElementById('npc-list');
-  const addBtn = document.getElementById('addNpcBtn');
-
-  const fields = [
-    "NPC",
-    "Телосложение",
-    "Ловкость",
-    "Смекалка",
-    "Эмпатия",
-    "Оружие",
-    "Доспехи",
-    "Таланты"
-  ];
-
-  function createNpcCard() {
-    const card = document.createElement('div');
-    card.className = 'npc-card';
-
-    fields.forEach((field, index) => {
-      const row = document.createElement('div');
-      row.className = 'npc-row';
-
-      const label = document.createElement('label');
-      label.textContent = field + ":";
-
-      let input;
-
-      // "Таланты" → textarea с автоподстройкой высоты
-      if (field === "Таланты") {
-        input = document.createElement('textarea');
-        input.placeholder = "Введите значение...";
-        input.rows = 1;               // начальная высота
-        input.style.overflow = 'hidden';
-        input.style.resize = 'none';
-        input.addEventListener('input', () => {
-          input.style.height = 'auto';
-          input.style.height = input.scrollHeight + 'px';
-        });
-      } else {
-        input = document.createElement('input');
-        input.type = 'text';
-        input.placeholder = "Введите значение...";
-      }
-
-      // Оранжевое имя NPC
-      if (index === 0) {
-        input.style.color = 'orange';
-        input.style.fontWeight = 'bold';
-      }
-
-      row.appendChild(label);
-      row.appendChild(input);
-      card.appendChild(row);
-    });
-
-    const controls = document.createElement('div');
-    controls.className = 'npc-controls';
-
-    const copyBtn = document.createElement('button');
-    copyBtn.textContent = 'Скопировать';
-    copyBtn.onclick = () => {
-      const data = [];
-      card.querySelectorAll('.npc-row').forEach(row => {
-        const label = row.querySelector('label').textContent;
-        const inputEl = row.querySelector('input, textarea');
-        const value = inputEl.value;
-        data.push(`${label} ${value}`);
-      });
-      navigator.clipboard.writeText(data.join("\n"));
-      copyBtn.textContent = '✓';
-      setTimeout(() => (copyBtn.textContent = 'Скопировать'), 1000);
-    };
-
-    const delBtn = document.createElement('button');
-    delBtn.textContent = 'Удалить';
-    delBtn.onclick = () => {
-      if (confirm('Удалить эту карточку NPC?')) card.remove();
-    };
-
-    controls.appendChild(copyBtn);
-    controls.appendChild(delBtn);
-    card.appendChild(controls);
-
-    return card;
-  }
-
-  // стартовые карточки
-  npcList.appendChild(createNpcCard());
-  npcList.appendChild(createNpcCard());
-
-  addBtn.onclick = () => npcList.appendChild(createNpcCard());
-</script>
-
-
-
-
-
-
-</body>
+      <div class="container3">
+    <p id="one" style="text-align: center; font-size: 20pt; margin-bottom: 100px;">Отзывы<br><span style="color: rgb(196, 95, 196)" ;>(все изображения кликабельные, и при нажатии направляют Вас к покупателю)</span></p>
+    <p><a href="https://discordapp.com/users/293616688740564993" target="_blank"><img class="one zoom-one" style="margin-bottom: 50px; border: solid black 2px;" src="https://i.ibb.co/TqrXJvCx/1.jpg" alt="Отзыв"></a></p>
+    <p><a href="https://discordapp.com/users/300267511876943875" target="_blank"><img class="one zoom-one" style="margin-bottom: 80px; border: solid black 2px;" src="https://i.ibb.co/9918zGsj/2.jpg" alt="Отзыв"></a></p>
+     <p><a href="https://discordapp.com/users/382106564212817920" target="_blank"><img class="one zoom-one" style="margin-bottom: 100px; border: solid black 2px;" src="https://i.ibb.co/4g72fSJ2/image.png" alt="Отзыв"></a></p>
+     <p><a href="https://discordapp.com/users/697075663924101140" target="_blank"><img class="one zoom-one" style="margin-bottom: 100px; border: solid black 2px;" src="https://i.ibb.co/WWHB2PFw/image.png" alt="Отзыв"></a></p>
+    </div>
+  </body>
 </html>
