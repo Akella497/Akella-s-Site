@@ -4,7 +4,7 @@
 
 /* Тело страницы */
 body {
-    background-image: url(https://cdn.imgpile.com/f/NSaD1Vz_xl.jpg);
+/*     background-image: url(https://cdn.imgpile.com/f/NSaD1Vz_xl.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -161,4 +161,5 @@ a {
 ::-webkit-scrollbar-track {
     border-radius: 5px;
     background-color: transparent;
+
 }
