@@ -60,8 +60,8 @@ body {
     border-radius: 20px;
     max-width: 500px;
     text-align: center;
-    box-shadow: 0 20px 60px rgba(196, 95, 196, 0.3);
-    border: 2px solid rgba(196, 95, 196, 0.3);
+    box-shadow: 0 20px 60px rgba(255, 140, 66, 0.3);
+    border: 2px solid rgba(255, 140, 66, 0.3);
     animation: slideUp 0.4s ease;
     position: relative;
 }
@@ -111,6 +111,13 @@ body {
     margin-bottom: 30px !important;
 }
 
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .modal-button {
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     color: white;
@@ -123,17 +130,27 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 5px 15px rgba(196, 95, 196, 0.4);
+    box-shadow: 0 5px 15px rgba(255, 140, 66, 0.4);
 }
 
 .modal-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(196, 95, 196, 0.6);
+    box-shadow: 0 8px 25px rgba(255, 140, 66, 0.6);
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
 }
 
 .modal-button:active {
     transform: translateY(0);
+}
+
+.modal-button-secondary {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+.modal-button-secondary:hover {
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.6);
+    background: linear-gradient(135deg, #45a049, #4CAF50);
 }
 
 /* ========== Основной wrapper ========== */
@@ -356,7 +373,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(196, 95, 196, 0.9);
+    background: rgba(255, 140, 66, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -374,56 +391,6 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-}
-
-/* ========== Отзывы ========== */
-.reviews-section {
-    margin: 80px 0;
-    padding: 60px 40px;
-    background: var(--bg-overlay);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    animation: fadeIn 1s ease 0.7s both;
-}
-
-.reviews-subtitle {
-    text-align: center;
-    color: var(--text-gray);
-    margin-bottom: 40px;
-    font-size: 16px;
-}
-
-.reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.review-item {
-    display: block;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: var(--transition);
-    border: 3px solid transparent;
-}
-
-.review-item:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(196, 95, 196, 0.4);
-}
-
-.review-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: var(--transition);
-}
-
-.review-item:hover .review-image {
-    transform: scale(1.05);
 }
 
 /* ========== Footer ========== */
