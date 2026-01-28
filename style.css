@@ -130,7 +130,8 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 5px 15px rgba(255, 140, 66, 0.4);
+    margin-top: 1rem;
+    box-shadow: 0 5px 15px rgba(196, 95, 196, 0.4);
 }
 
 .modal-button:hover {
@@ -547,3 +548,4 @@ a:hover {
         transform: translateY(0);
     }
 }
+
