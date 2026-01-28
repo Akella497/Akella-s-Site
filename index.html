@@ -19,7 +19,10 @@
         <h2>Добро пожаловать!</h2>
         <p>Обновите страницу для актуализации информации</p>
         <p class="modal-subtitle">Портфолио регулярно пополняется новыми работами</p>
-        <button id="closeModal" class="modal-button">Понятно</button>
+        <div class="modal-buttons">
+          <button id="closeModal" class="modal-button">Понятно</button>
+          <button id="refreshPage" class="modal-button modal-button-secondary">🔄 Обновить страницу</button>
+        </div>
       </div>
     </div>
 
@@ -36,7 +39,7 @@
             <div class="greeting-card">
               <h2>Привет! 👋</h2>
               <p>
-                Эта страница — <a href="#gallery">портфолио</a>, которое постепенно пополняется. Здесь же находятся и <a href="#reviews">отзывы</a>.
+                Эта страница — <a href="#gallery">портфолио</a>, которое постепенно пополняется.
               </p>
             </div>
 
@@ -367,26 +370,6 @@
         </div>
       </section>
 
-      <section id="reviews" class="reviews-section">
-        <h2 class="section-title">Отзывы</h2>
-        <p class="reviews-subtitle">Все изображения кликабельные и направляют к профилю покупателя</p>
-        
-        <div class="reviews-grid">
-          <a href="https://discordapp.com/users/293616688740564993" target="_blank" class="review-item">
-            <img class="review-image" src="https://i.ibb.co/TqrXJvCx/1.jpg" alt="Отзыв от клиента">
-          </a>
-          <a href="https://discordapp.com/users/300267511876943875" target="_blank" class="review-item">
-            <img class="review-image" src="https://i.ibb.co/9918zGsj/2.jpg" alt="Отзыв от клиента">
-          </a>
-          <a href="https://discordapp.com/users/382106564212817920" target="_blank" class="review-item">
-            <img class="review-image" src="https://i.ibb.co/4g72fSJ2/image.png" alt="Отзыв от клиента">
-          </a>
-          <a href="https://discordapp.com/users/697075663924101140" target="_blank" class="review-item">
-            <img class="review-image" src="https://i.ibb.co/WWHB2PFw/image.png" alt="Отзыв от клиента">
-          </a>
-        </div>
-      </section>
-
       <footer class="footer">
         <p>© 2025 akellav — Портфолио</p>
         <p>Связаться: <a href="https://discordapp.com/users/280252464148774917">Discord</a></p>
@@ -398,6 +381,7 @@
       window.addEventListener('DOMContentLoaded', function() {
         const modal = document.getElementById('disclaimerModal');
         const closeBtn = document.getElementById('closeModal');
+        const refreshBtn = document.getElementById('refreshPage');
         
         // Проверяем, первый ли это визит в рамках сессии
         if (!sessionStorage.getItem('disclaimerShown')) {
@@ -410,6 +394,11 @@
           modal.style.display = 'none';
           document.body.style.overflow = 'auto';
           sessionStorage.setItem('disclaimerShown', 'true');
+        });
+        
+        // Обновление страницы
+        refreshBtn.addEventListener('click', function() {
+          location.reload();
         });
         
         // Закрытие при клике вне модального окна
