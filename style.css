@@ -6,9 +6,10 @@
 }
 
 :root {
-    --primary-color: #c45fc4;
-    --primary-dark: #a040a0;
+    --primary-color: #ff8c42;
+    --primary-dark: #e67326;
     --accent-color: #adff2f;
+    --pink-color: #c45fc4;
     --text-light: #ffffff;
     --text-gray: #c2c2c2;
     --bg-overlay: rgba(0, 0, 0, 0.85);
@@ -325,7 +326,7 @@ body {
 
 .item-tech {
     padding: 0 20px 15px;
-    color: var(--primary-color);
+    color: var(--pink-color);
     font-size: 14px;
     font-style: italic;
 }
